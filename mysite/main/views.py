@@ -7,8 +7,8 @@ from .models import ToDoList, Item
 
 def index(response, id):
     t = ToDoList.objects.get(id=id)
-    item = t.item_set.get(id=1)
-    return HttpResponse(f"<h1>tech with tim! Looking at list: {t.name} it has {item.text}</h1>")
+    #item = t.item_set.get(id=1)
+    return render(response, "main/base.html", {}) # assuming already in templates folder?
 
-def v1(response):
-    return HttpResponse("<h1>View 1!</h1>")
+def home(response):
+    return render(response, "main/home.html", {})
