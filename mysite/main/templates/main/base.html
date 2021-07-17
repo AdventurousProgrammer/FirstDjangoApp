@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %} My First Django App {% endblock %}</title>
 </head>
 <body>
-    <p>Base Template</p>
+    <div id="content", name="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!--<p>{{name}}</p>-->
 </body>
 </html>
